@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:newsportalmobile/app_info.dart';
-import 'package:newsportalmobile/screens/Homepage.dart';
+import 'package:newsportalmobile/screens/home_screen.dart';
 
 Map<String, String> users = const {
   'dribbble@gmail.com': '12345',
@@ -9,18 +9,14 @@ Map<String, String> users = const {
 };
 
 class LoginScreen extends StatelessWidget {
-  Duration get loginTime => Duration(milliseconds: 2250);
+  const LoginScreen({super.key});
+
+  Duration get loginTime => const Duration(milliseconds: 2250);
 
   Future<String?> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');
     return Future.delayed(loginTime).then((_) {
-      // if (!users.containsKey(data.name)) {
-      //   return 'User not exists';
-      // }
-      // if (users[data.name] != data.password) {
-      //   return 'Password does not match';
-      // }
-      print('BHayooooooooooooooooooooooooooo');
+      return null;
     });
   }
 
@@ -50,12 +46,12 @@ class LoginScreen extends StatelessWidget {
       // logo: 'asd',
       logoTag: AppInfo().appName,
       title: AppInfo().appName,
-      footer: 'Devloperd By ' + AppInfo().teamName,
+      footer: 'Devloperd By ${AppInfo().teamName}',
       onLogin: _authUser,
       onSignup: _signupUser,
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => MyHomePage(),
+          builder: (context) => const MyHomePage(),
         ));
       },
       onRecoverPassword: _recoverPassword,
