@@ -4,6 +4,7 @@ import BelowHeader from './components/BelowHeader'
 import CardSlider from './components/CardSlider'
 import Exclusive from './components/Exclusive'
 import Slider from './components/Slider';
+import CardSlide from './components/card'
 
 export const App = () => {
   return(
@@ -11,8 +12,10 @@ export const App = () => {
       <Header/>
       <Slider/>
       <BelowHeader/>
-      <CardSlider/>
+      <CardSlide/>
+      {/* <CardSlider/> */}
       <Exclusive/>
+      
     </div>
   )
 }

@@ -106,16 +106,7 @@ function Slider() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-      {/* <div style={{ display: "inline-flex", marginTop: "-25em", display: "inline-flex", position: "absolute", padding: "10em", fontSize: "12px" }}>
-        <a href='#' style={{textDecoration:"none", color:"#fff", padding:"10px"}}> Government saddles Sheetal Niwas with disputed ordinance </a> 
-        <a href='#' style={{textDecoration:"none", color:"#fff",padding:"10px"}}> Complaint lodged against eight persons on charge of vandalism,
-         arson at hydropower office </a>  
-        <a href='#' style={{textDecoration:"none", color:"#fff",padding:"10px"}}> Death toll from Jajarkot jeep mishap reaches 12 </a>  
-        <a href='#' style={{textDecoration:"none", color:"#fff",padding:"10px"}}> China says situation 'stable' at border with India after clashes </a> 
-      </div> */}
-
-    </div>
+          </div>
 
   );
 }
