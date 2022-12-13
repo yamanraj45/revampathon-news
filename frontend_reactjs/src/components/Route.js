@@ -14,6 +14,7 @@ function RouteLinks() {
                     <Route path="/news" element={<Detail/>} />
                     <Route path="/sports" element={<Detail/>} />
                     <Route path="/travel" element={<Detail/>} />
+                    <Route path="/culture" element={<Detail/>} />
                 </Routes>
             </BrowserRouter>
         </div>
