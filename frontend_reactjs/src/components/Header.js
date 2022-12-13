@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{position:"sticky"}}>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">NEWS</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
