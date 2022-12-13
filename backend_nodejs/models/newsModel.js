@@ -10,6 +10,7 @@ const newsSchema = mongoose.Schema({
     category:String,
     author:String,
     readTime:Number,
+    content:String
 },{timestamps:true})
 
 const News = mongoose.model("News", newsSchema);
