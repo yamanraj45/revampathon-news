@@ -9,10 +9,10 @@ export const App = () => {
   return(
     <div>
       <Header/>
+      <Slider/>
       <BelowHeader/>
       <CardSlider/>
       <Exclusive/>
-      <Slider/>
     </div>
   )
 }
