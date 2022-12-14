@@ -9,7 +9,7 @@ const newsSchema = mongoose.Schema({
     image:String,
     category:String,
     author:String,
-    readTime:Number,
+    readTime:String,
     content:String,
     date:String
 },{timestamps:true})
