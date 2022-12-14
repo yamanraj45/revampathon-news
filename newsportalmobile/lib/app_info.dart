@@ -1,5 +1,5 @@
 class AppInfo {
-  String appName = 'Patrika';
+  String appName = 'Online Khabar';
   String logoPath = '';
-  String teamName = 'Bazinga';
+  String teamName = 'Conqueror';
 }
