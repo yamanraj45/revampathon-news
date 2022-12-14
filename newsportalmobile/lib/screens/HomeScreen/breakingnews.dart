@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:newsportalmobile/directory.dart';
+import 'package:newsportalmobile/screens/Article/articleScreen.dart';
 import 'package:newsportalmobile/widgets/text.dart';
 
 Widget breakingNews(BuildContext context) {
@@ -17,30 +19,39 @@ Widget breakingNews(BuildContext context) {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => Column(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        // color:
-                        // Theme.of(context).colorScheme.secondary,
-                        borderRadius: BorderRadius.circular(8.0)),
-                    height: MediaQuery.of(context).size.height * 0.2,
-                    width: MediaQuery.of(context).size.width * 0.37,
-                    child: Image.network(
-                      homeScreenimage,
-                      fit: BoxFit.cover,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ArticleScreen(),
+                      ));
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                          // color:
+                          // Theme.of(context).colorScheme.secondary,
+                          borderRadius: BorderRadius.circular(8.0)),
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      width: MediaQuery.of(context).size.width * 0.37,
+                      child: Image.network(
+                        homeScreenimage,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.31,
-                    child: boldtext(
-                        'Hello This is place for title of breaking news',
-                        size: 13),
-                  ),
-                  normalText('Author', size: 11)
-                ],
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.31,
+                      child: boldtext(
+                          'Hello This is place for title of breaking news',
+                          size: 13),
+                    ),
+                    normalText('Author', size: 11)
+                  ],
+                ),
               ),
             ],
           ),
