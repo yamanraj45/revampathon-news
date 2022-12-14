@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_login:
   appbar_animated: ^0.0.3
+  bottom_navy_bar: ^6.0.0
+  fancy_shimmer_image: ^2.0.2
+  flare_flutter:
   
 
 dev_dependencies:
