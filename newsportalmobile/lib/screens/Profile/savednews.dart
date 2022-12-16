@@ -3,11 +3,11 @@ import 'package:newsportalmobile/directory.dart';
 import 'package:newsportalmobile/screens/Article/articleScreen.dart';
 import 'package:newsportalmobile/widgets/text.dart';
 
-Widget hotNews(BuildContext context) {
+Widget savedNews(BuildContext context) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      boldtext('Hot News', size: 18),
+      boldtext('Saved News', size: 18),
       ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,

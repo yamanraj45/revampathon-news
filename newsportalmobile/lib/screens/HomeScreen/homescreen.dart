@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:newsportalmobile/directory.dart';
 import 'package:newsportalmobile/screens/HomeScreen/breakingnews.dart';
+import 'package:newsportalmobile/screens/HomeScreen/categorychips.dart';
 import 'package:newsportalmobile/screens/HomeScreen/hotnews.dart';
 import 'package:newsportalmobile/screens/HomeScreen/top_card.dart';
 import 'package:newsportalmobile/widgets/gappingbox.dart';
@@ -31,6 +32,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   gapbox(),
                   breakingNews(context),
+                  gapbox(size: 20),
+                  CategoryChips(),
                   gapbox(size: 20),
                   hotNews(context),
                 ],

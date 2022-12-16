@@ -31,22 +31,20 @@ class _SearchScreenState extends State<SearchScreen>
           boldtext('Discover', size: 24),
           normalText('Top News from all around world', size: 11),
           searchbar(),
-          Container(
-            child: TabBar(
-              indicatorColor: Theme.of(context).colorScheme.primary,
-              unselectedLabelColor: Theme.of(context).colorScheme.secondary,
-              labelColor: Theme.of(context).colorScheme.primary,
-              tabs: const [
-                Tab(
-                  text: 'Sports',
-                ),
-                Tab(
-                  text: 'Politics',
-                )
-              ],
-              controller: _tabController,
-              indicatorSize: TabBarIndicatorSize.tab,
-            ),
+          TabBar(
+            indicatorColor: Theme.of(context).colorScheme.primary,
+            unselectedLabelColor: Theme.of(context).colorScheme.secondary,
+            labelColor: Theme.of(context).colorScheme.primary,
+            tabs: const [
+              Tab(
+                text: 'Sports',
+              ),
+              Tab(
+                text: 'Politics',
+              )
+            ],
+            controller: _tabController,
+            indicatorSize: TabBarIndicatorSize.tab,
           ),
           Expanded(
             child: TabBarView(

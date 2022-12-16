@@ -7,10 +7,7 @@ class AuthButton extends StatefulWidget {
 }
 
 class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
-  String _buttonText = 'BUY TICKET';
-
   late AnimationController _controller;
-  late Animation _roundnessAnimation;
 
   @override
   void initState() {
@@ -18,7 +15,7 @@ class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
 
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(
+      duration: const Duration(
         milliseconds: 500,
       ),
     )..addListener(() {
@@ -30,16 +27,11 @@ class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) {
-            return HomePage();
+            return const HomePage();
           }),
         );
       }
     });
-
-    _roundnessAnimation = Tween(begin: 10.0, end: 25.0).animate(CurvedAnimation(
-      parent: _controller,
-      curve: Curves.linear,
-    ));
   }
 
   @override
@@ -63,7 +55,7 @@ class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
             BuildContext toHeroContext,
           ) {
             return Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.black,
                 shape: BoxShape.circle,
               ),
@@ -72,7 +64,7 @@ class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
           child: Container(
             height: (60.0),
             decoration: BoxDecoration(
-                gradient: new LinearGradient(
+                gradient: const LinearGradient(
                   colors: [
                     Colors.black,
                     Colors.black,
@@ -80,7 +72,7 @@ class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black,
                     spreadRadius: 5,
@@ -94,11 +86,11 @@ class _AuthButtonState extends State<AuthButton> with TickerProviderStateMixin {
                       Colors.black, //                   <--- border width here
                 ),
                 color: Colors.black,
-                borderRadius: BorderRadius.all(Radius.circular((22.0)))),
+                borderRadius: const BorderRadius.all(Radius.circular((22.0)))),
             child: Container(
 //                        margin: EdgeInsets.only(left: (10)),
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 "SIGN IN",
                 textAlign: TextAlign.center,
                 style: TextStyle(

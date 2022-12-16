@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsportalmobile/screens/HomeScreen/hotnews.dart';
+import 'package:newsportalmobile/screens/Profile/savednews.dart';
 import 'package:newsportalmobile/widgets/text.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            const SizedBox(
               height: 200,
               child: CircleAvatar(maxRadius: 50),
             ),
@@ -26,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            hotNews(context)
+            savedNews(context)
           ],
         ),
       ),

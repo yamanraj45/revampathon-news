@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(
+        const Text(
           'Email',
           style: kLabelStyle,
         ),
@@ -24,16 +24,16 @@ class _LoginScreenState extends State<LoginScreen> {
           alignment: Alignment.centerLeft,
           decoration: kBoxDecorationStyle,
           height: 60.0,
-          child: TextField(
+          child: const TextField(
             keyboardType: TextInputType.emailAddress,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
               fontFamily: 'OpenSans',
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
-              contentPadding: const EdgeInsets.only(top: 14.0),
-              prefixIcon: const Icon(
+              contentPadding: EdgeInsets.only(top: 14.0),
+              prefixIcon: Icon(
                 Icons.email,
                 color: Colors.white,
               ),
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text(
+        const Text(
           'Password',
           style: kLabelStyle,
         ),
@@ -59,16 +59,16 @@ class _LoginScreenState extends State<LoginScreen> {
           alignment: Alignment.centerLeft,
           decoration: kBoxDecorationStyle,
           height: 60.0,
-          child: TextField(
+          child: const TextField(
             obscureText: true,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
               fontFamily: 'OpenSans',
             ),
             decoration: InputDecoration(
               border: InputBorder.none,
-              contentPadding: const EdgeInsets.only(top: 14.0),
-              prefixIcon: const Icon(
+              contentPadding: EdgeInsets.only(top: 14.0),
+              prefixIcon: Icon(
                 Icons.lock,
                 color: Colors.white,
               ),
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
       child: TextButton(
         onPressed: () => print('Forgot Password Button Pressed'),
         // padding: EdgeInsets.only(right: 0.0),
-        child: Text(
+        child: const Text(
           'Forgot Password?',
           style: kLabelStyle,
         ),
@@ -96,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildRememberMeCheckbox() {
-    return Container(
+    return SizedBox(
       height: 20.0,
       child: Row(
         children: <Widget>[
@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
               },
             ),
           ),
-          Text(
+          const Text(
             'Remember me',
             style: kLabelStyle,
           ),
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => TabScreen(),
+                builder: (context) => const TabScreen(),
               ));
         },
         // padding: EdgeInsets.all(15.0),
@@ -156,15 +156,15 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildSignInWithText() {
     return Column(
-      children: <Widget>[
-        const Text(
+      children: const <Widget>[
+        Text(
           '- OR -',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w400,
           ),
         ),
-        const SizedBox(height: 20.0),
+        SizedBox(height: 20.0),
         Text(
           'Sign in with',
           style: kLabelStyle,
@@ -182,8 +182,8 @@ class _LoginScreenState extends State<LoginScreen> {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
-          boxShadow: [
-            const BoxShadow(
+          boxShadow: const [
+            BoxShadow(
               color: Colors.black26,
               offset: Offset(0, 2),
               blurRadius: 6.0,
@@ -308,10 +308,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => TabScreen(),
+                                  builder: (context) => const TabScreen(),
                                 ));
                           },
-                          child: Text(
+                          child: const Text(
                             'SKIP',
                             style: TextStyle(
                               color: Colors.white,
