@@ -4,8 +4,8 @@ import image1 from '../assets/images/Morocoo.png'
 import image2 from '../assets/images/Cholendra_JBR.jpeg'
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { FiShare2 } from 'react-icons/fi';
-
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 const captionStyle = {
   fontSize: "30px",
@@ -27,24 +27,24 @@ const hotNewsStyle = {
   fontSize: "12px"
 }
 
-function Slider() {
+function Slider({news}) {
   return (
     <div style={{ backgroundColor: "black" }}>
-      <Carousel fade  >
+      <Carousel fade  col={3} >
         <Carousel.Item >
           <img
             className="d-block w-100"
-            src={image}
-            alt="First slide"
+            src={news.image}
+            alt="slide"
             style={{ height: "100vh", opacity: "0.5" }}
           />
           <Carousel.Caption>
-            <caption style={{ ...captionStyle }} >UML Student Union Protest Against Resham Chaudhari Bail Grant. </caption  >
+        <span style={{ ...captionStyle }} >{news.title} </span>
             <hr style={{ marginBottom: "2em" }} />
             <span style={{ ...hrBelowStyle }}>
               <FiArrowRightCircle style={{ fontSize: "30px" }} />
               <span style={{ paddingRight: "50px" }}> Read More</span>
-              <FiShare2 style={{ fontSize: "30px" }} /> <span>Share</span>
+              <FiShare2 style={{ fontSize: "30px" }} /> <span>Share &nbsp; - {news.readTime}</span>
             </span>
             <div style={{ ...hotNewsStyle }}>
               <a href='#' style={{ textDecoration: "none", color: "#fff", padding: "10px" }}> Government saddles Sheetal Niwas with disputed ordinance </a>
@@ -64,7 +64,7 @@ function Slider() {
           />
 
           <Carousel.Caption >
-            <caption style={{ ...captionStyle }} > 10 moments in World Cup 2022.</caption  >
+        <span style={{ ...captionStyle }} > 10 moments in World Cup 2022.</span>
             <hr style={{ marginBottom: "2em" }} />
             <span style={{ ...hrBelowStyle }}>
               <FiArrowRightCircle style={{ fontSize: "30px" }} />
@@ -88,7 +88,7 @@ function Slider() {
             style={{ height: '100vh', opacity: "0.5" }}
           />
           <Carousel.Caption >
-            <caption style={{ ...captionStyle }} >Impeachment is only a political weapon</caption  >
+        <span style={{ ...captionStyle }} >Impeachment is only a political weapon</span>
             <hr style={{ marginBottom: "2em" }} />
             <span style={{ ...hrBelowStyle }}>
               <FiArrowRightCircle style={{ fontSize: "30px" }} />
