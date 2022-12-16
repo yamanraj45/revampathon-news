@@ -1,8 +1,10 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:newsportalmobile/app_info.dart';
+import 'package:newsportalmobile/config/app_info.dart';
 import 'package:newsportalmobile/config/colors.dart';
 import 'package:newsportalmobile/screens/Auth/Login.dart';
+import 'package:newsportalmobile/screens/HomeScreen/homescreen.dart';
+import 'package:newsportalmobile/screens/tab_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 void main() {

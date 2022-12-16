@@ -3,7 +3,7 @@ import 'package:newsportalmobile/directory.dart';
 import 'package:newsportalmobile/screens/Article/articleScreen.dart';
 import 'package:newsportalmobile/widgets/text.dart';
 
-Widget hotNews(BuildContext context) {
+Widget hotNews(BuildContext context, news) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -11,8 +11,14 @@ Widget hotNews(BuildContext context) {
       ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        itemCount: 13,
+        itemCount: news.length,
         itemBuilder: (context, index) {
+          var title = news[index]['title'];
+          var image = news[index]['image'];
+          var readTime = news[index]['readTime'];
+          var date = news[index]['date'];
+          var category = news[index]['category'];
+          var content = news[index]['content'];
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
@@ -20,7 +26,8 @@ Widget hotNews(BuildContext context) {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ArticleScreen(),
+                      builder: (context) =>
+                          ArticleScreen(title, image, content),
                     ));
               },
               child: Card(
@@ -34,7 +41,7 @@ Widget hotNews(BuildContext context) {
                         decoration: const BoxDecoration(color: Colors.grey),
                         child: index % 5 == 0 && index != 0
                             ? const FlutterLogo()
-                            : Image.network(homeScreenimage, fit: BoxFit.cover),
+                            : Image.network(image, fit: BoxFit.cover),
                       ),
                       const SizedBox(
                         height: 10,
@@ -48,7 +55,7 @@ Widget hotNews(BuildContext context) {
                             width: MediaQuery.of(context).size.width * 0.6,
                             child: boldtext(index % 5 == 0 && index != 0
                                 ? 'Space For Advertisements'
-                                : 'This is a section for title and her goes the titel'),
+                                : title),
                           ),
                           normalText('Descr')
                         ],

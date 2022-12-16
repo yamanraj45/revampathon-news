@@ -6,7 +6,10 @@ import 'package:newsportalmobile/screens/Article/articletextsection.dart';
 import 'package:newsportalmobile/screens/Article/widgets/chips.dart';
 
 class ArticleScreen extends StatefulWidget {
-  const ArticleScreen({super.key});
+  String title;
+  String body;
+  String imagePath;
+  ArticleScreen(this.title, this.imagePath, this.body, {super.key});
 
   @override
   State<ArticleScreen> createState() => _ArticleScreenState();
@@ -28,16 +31,16 @@ class _ArticleScreenState extends State<ArticleScreen> {
                 Stack(
                   children: [
                     Image.network(
-                      "https://www.gotravelly.com/blog/wp-content/uploads/2019/10/Gunung-Fuji-Jepang.jpg",
+                      widget.imagePath,
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height * 0.4,
                       fit: BoxFit.cover,
                     ),
-                    const Positioned(
+                    Positioned(
                       left: 10,
                       bottom: 40,
                       child: Text(
-                        'Hello, title goes here',
+                        widget.title,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -100,7 +103,7 @@ class _ArticleScreenState extends State<ArticleScreen> {
                           ],
                         ),
                       ),
-                      articleText(),
+                      articleText(widget.body),
                       adSpace(context),
                     ],
                   ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:newsportalmobile/constants.dart';
+import 'package:newsportalmobile/config/constants.dart';
 import 'package:newsportalmobile/screens/tab_screen.dart';
 
 class LoginScreen extends StatefulWidget {

@@ -3,7 +3,13 @@ import 'package:newsportalmobile/directory.dart';
 import 'package:newsportalmobile/screens/Article/articleScreen.dart';
 import 'package:newsportalmobile/widgets/text.dart';
 
-Widget savedNews(BuildContext context) {
+Widget savedNews(BuildContext context, news) {
+  var title = news[0]['title'];
+  var image = news[0]['image'];
+  var readTime = news[0]['readTime'];
+  var date = news[0]['date'];
+  var category = news[0]['category'];
+  var content = news[0]['content'];
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -20,7 +26,8 @@ Widget savedNews(BuildContext context) {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ArticleScreen(),
+                      builder: (context) =>
+                          ArticleScreen(title, image, content),
                     ));
               },
               child: Card(

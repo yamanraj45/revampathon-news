@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:newsportalmobile/directory.dart';
 import 'package:newsportalmobile/screens/Article/articleScreen.dart';
+import 'package:newsportalmobile/screens/HomeScreen/categorychips.dart';
 import 'package:newsportalmobile/widgets/text.dart';
 
-Widget topCard(BuildContext context) {
+Widget topCard(BuildContext context, news) {
+  var title = news[0]['title'];
+  var image = news[0]['image'];
+  var readTime = news[0]['readTime'];
+  var date = news[0]['date'];
+  var category = news[0]['category'];
+  var content = news[0]['content'];
   return InkWell(
     onTap: () {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ArticleScreen(),
+            builder: (context) => ArticleScreen(title, image, content),
           ));
     },
     child: Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        image: const DecorationImage(
+        image: DecorationImage(
             opacity: 0.5,
             fit: BoxFit.cover,
             image: NetworkImage(
-              homeScreenimage,
+              image,
             )),
         color: Theme.of(context).colorScheme.secondary,
         borderRadius: const BorderRadius.only(
@@ -37,11 +44,9 @@ Widget topCard(BuildContext context) {
               color: Theme.of(context).colorScheme.surface,
             ),
             padding: const EdgeInsets.all(8),
-            child: const Text('Cat'),
+            child: Text(category),
           ),
-          boldtext(
-              'This is a place for title you can keep as longtitle as you want because it will not overflow',
-              size: 18),
+          boldtext(title),
           const Text('Learn More ->'),
         ],
       ),

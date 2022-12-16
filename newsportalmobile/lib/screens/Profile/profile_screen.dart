@@ -27,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            savedNews(context)
+            // savedNews(context)
           ],
         ),
       ),
