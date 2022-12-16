@@ -5,28 +5,32 @@ import Col from 'react-bootstrap/Col';
 import BelowHeader from './BelowHeader';
 import BelowHeaderSmall from './BelowHeaderSmall';
 
-const Exclusive = () => {
+const Exclusive = ({news}) => {
   return (
     <section>
         <Container>
             <Row>
-                <Col sm={8} style={{paddingTop:'40px'}}>
-                    <h2 style={{paddingBottom:'20px'}}>Latest News</h2>
-                    <img className='w-100 h-auto' src='https://pixabay.com/get/g842edb02090f58e62f4cc26b364eabf3ff4a818ede9f26000fa77256067fe8a014868ccc61c9db579cd1d700ba6b7779a3011dc99b6dc8f50e23d0901a106152fba73aa95e5b20538b9416edd1037e3c_1920.jpg' alt=''></img>
-                    <p>POLITICS</p>
-                    <h2>Michael Bloomberg unveils election plan</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <p>13 Feb.100 views</p>
+                <Col sm={12} style={{paddingTop:'40px'}}>
+                    <h2 style={{paddingBottom:'20px'}}>{news.category}</h2>
+                    <img className='w-100 h-auto' src={news.image} alt=''></img>
+                    <p>{news.category}</p>
+                    <h2>{news.title}</h2>
+                    <p> {news.body} </p>
+                    <p>{news.date } - {news.readTime} </p>
                 </Col>
-                <Col sm={4}  style={{paddingTop:'80px'}}>
+                {/* <Col sm={}  style={{paddingTop:'80px'}}>
+
                     <BelowHeaderSmall/>
                     <hr/>
-                    <BelowHeaderSmall/>
+                    <BelowHeaderSmall/> 
                     <hr/>
-                    <BelowHeaderSmall/>
-                    <hr/>
-                    <BelowHeaderSmall/>
-                </Col>
+                    <BelowHeaderSmall/> 
+                     <hr/> 
+                     <BelowHeaderSmall/> 
+                     <hr/> 
+                     <BelowHeaderSmall/> 
+
+                </Col> */}
             </Row>
         </Container>
     </section>
